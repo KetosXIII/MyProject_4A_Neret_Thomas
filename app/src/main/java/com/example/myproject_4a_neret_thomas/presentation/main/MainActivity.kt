@@ -1,8 +1,9 @@
-package com.example.myproject_4a_neret_thomas
+package com.example.myproject_4a_neret_thomas.presentation.main
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
+import com.example.myproject_4a_neret_thomas.R
 import kotlinx.android.synthetic.main.activity_main.*
 import org.koin.android.ext.android.inject
 
@@ -12,7 +13,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        main_button.setOnClickListener { mainViewModel.onClickedIncrement() }
+        main_button.setOnClickListener { mainViewModel.onClickedIncrement("") }
         mainViewModel.counter.observe(this, Observer { value ->
             main_text.text   = value.toString()     })
 
