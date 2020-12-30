@@ -19,6 +19,6 @@ fun User.toData(): UserLocal{
 }
 fun UserLocal.toEntity(): User {
     return User(
-        email=email
+        email = email
     )
 }
